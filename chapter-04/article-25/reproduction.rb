@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
-# ruby planning/article-25-reproduction.rb
+# Reproduces the job compatibility checks described in https://railsrevelry.substack.com/p/job-enqueued-by-older-code
+#
+#   ruby chapter-04/article-25/reproduction.rb
+#
 # Each producer and consumer boots in a separate Ruby process.
 require "json"
 require "tmpdir"

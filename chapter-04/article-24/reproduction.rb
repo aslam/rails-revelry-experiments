@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Reproduces the transaction/queue handoff described in RailsRevelry Article 24.
+# Reproduces the transaction/queue handoff described in https://railsrevelry.substack.com/p/transaction-committed-job-reach-queue
 #
 #   ruby chapter-04/article-24/reproduction.rb separate
 #   ruby chapter-04/article-24/reproduction.rb same
