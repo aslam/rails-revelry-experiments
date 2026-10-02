@@ -38,3 +38,21 @@ execution without reaching the job's exception handler.
 
 The script uses temporary files and a temporary SQLite database, cleans them up
 after the run, and exits unsuccessfully if an assertion fails.
+
+## What `retry_on` Actually Means
+
+Article publication pending. Tested with Ruby 3.4.7 and Active Job 8.1.3.
+Install the dependency once, then run from the repository root:
+
+```bash
+gem install activejob:8.1.3
+ruby chapter-04/article-26/reproduction.rb
+```
+
+Five checks cover repeated side effects, retry exhaustion, a terminal block,
+a handled `ActiveJob::EnqueueError`, and an escaping adapter error with its
+cause chain. The script also checks serialized metadata and retry log output.
+
+It uses the test adapter and simulated effects: no network requests, database,
+worker, or real scheduling delay. It does not test Solid Queue persistence.
+The script exits unsuccessfully if an assertion fails.
